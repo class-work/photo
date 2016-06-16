@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Computible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minmum-scale=1,maxmun-scale=1,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	      .uploadpage{
+	      	-webkit-box-orient:vertical;
+	      }
+          .wrap .box1{
+          	position: absolute;
+          	bottom: 0;
+          	height: 6rem;
+          	width: 100%;
+            padding: 1rem 0;
+            box-sizing:content-box;
+             background-image:-webkit-linear-gradient(rgba(240,239,237,0.3),rgba(240,239,237,1)); 
+          /*  background-image:-webkit-linear-gradient(red,blue); */
+z-index: 0;
+          }
+          .wrap .img-info{
+          	overflow: auto;
+          }
+          #font-color{
+          	text-align: left;
+          }}
+          #uploadbox{
+          	z-index: 10;
+          }
+          #class{
+          	display: block;
+          	border:none;
+          	padding-left: 1rem;
+          	outline: none;
+          }
+          #class option{
+          	border:none;
+
+          }
+	</style>
+</head>
+<body>
+	<div class="wrap uploadpage flex-box" ng-app="">
+			<div class="uploadbox" id="uploadbox">
+			    <div class="my-photo" id="my-photo">
+					<img src="img/uploadbg.png">
+					<div class="my-msg" id="my-msg">
+						<h2>2016</h2>
+						<p>我是<span>{{str1 ? str1 : "______"}}</span></p>
+						<p><span>{{str2 ? str2 : "______"}}</span>必然是我</p>
+						<p><span>{{str3 ? str3 : "______"}}</span>必然<span>{{str4 ? str4 : "______"}}</span></p>
+						<p>程序不是年前的专利，但是它属于年轻</p>
+					</div>
+				</div>
+			</div>
+			<p class="tip">让梦想定格，让目标定格</p>
+			<form action="" class="img-info flex-son-box">
+				<div class="font-color" id="font-color">
+					文字颜色: <span class="on"></span><span></span><span></span><span></span>
+				</div>
+				<div>
+					文字内容：
+				</div>
+				<div class="input-box flex-box">
+					<span>我是 |</span><input type="text" ng-model="str1" class="flex-son-box" name="input1">
+				</div>
+				<div class="input-box flex-box">
+					<input type="text" class="flex-son-box" ng-model="str2"><span>| 必然是我</span>
+				</div>
+				<div class="input-box flex-box">
+					<input type="text" class="flex-son-box" ng-model="str3"><span>| 必然 |</span><input type="text" class="flex-son-box" ng-model="str4">
+				</div>
+				<div class="input-box flex-box">
+					<span>选择班级</span>
+					 <select name="" id="class" class="flex-son-box">
+						<option value="#">1407C</option><option value="#">1407A</option>
+						<option value="#">1407W</option>
+						<option value="#">1407Q</option>
+					</select>
+				</div>
+			</form>
+			<div class="box1 flex-box">
+			
+				<div class="flex-son-box btn-box" style="display: none;">
+					<a href="#" class="btn" id="input-start">
+						<img src="img/uploadicon.png" alt="">
+					</a>
+					开始编辑
+				</div>
+				<div class="flex-son-box btn-box" >
+					<a href="#" class="btn" id="upload-btn">
+						<img src="img/uploadicon.png" alt="">
+					</a>
+					上传头像
+					<form action="#">
+					<input type="file" id="upfile">
+					</form>
+				</div>
+				<div class="flex-son-box" style="display: none;">
+					<a href="#" class="btn" id="back">
+						<img src="img/back.png" alt="">
+					</a>
+					返回
+				</div>
+				<div class="flex-son-box" >
+					<a href="#" class="btn" id="ok">
+						<img src="img/ok.png" alt="">
+					</a>
+					确认头像
+				</div>
+				<div class="flex-son-box" style="display: none;">
+					<a href="#" class="btn" id="create-poster" >
+						<img src="img/ok.png" alt="">
+					</a>
+					生成海报
+				</div>
+				<div class="flex-son-box btn-box" style="display: none;">
+					<a href="index.html" class="btn" id="photoBall">
+						<img src="img/uploadicon.png" alt="">
+					</a>
+					照片墙
+				</div>
+			</div>
+	</div>
+<script src="js/zepto.js"></script>
+<script src="js/angular-1.3.0.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
